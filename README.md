@@ -88,6 +88,23 @@ func init() {
 }
 ```
 
+## Container Images
+
+CI builds and pushes a container image to GHCR on every push to any branch.
+
+```sh
+# Pull the latest image
+docker pull ghcr.io/<owner>/go-cli-template:latest
+
+# Pull a specific commit
+docker pull ghcr.io/<owner>/go-cli-template:<sha>
+
+# Run
+docker run ghcr.io/<owner>/go-cli-template:latest
+```
+
+Replace `<owner>` with your GitHub username or org. Images are tagged with both `latest` and the commit SHA.
+
 ## License
 
 MIT
